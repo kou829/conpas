@@ -46,3 +46,11 @@ const swiper = new Swiper('.swiper-container', {
       prevEl: '.swiper-button-prev',
     },
 });
+
+// ドロワーメニューバー設定
+document.addEventListener('DOMContentLoaded',function() {
+    document.getElementById('menuButton').addEventListener("click", function(){
+        this.classList.toggle("active");
+        document.getElementById("header_nav").classList.toggle("active");
+    })
+});
