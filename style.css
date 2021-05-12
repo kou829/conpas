@@ -22,6 +22,7 @@
     /* headerのCSS */
     .menu a {
         display: none;
+        visibility: visible;
     }
 
     #header_nav {
@@ -38,11 +39,14 @@
         margin: 10px 0;
         width: 140px;
         display: inline-block;
-        color: rgb(255, 166, 0, 0.8);
-        font-weight: bold;
         padding: 10px 0;
         border-right: 1px solid #fff;
         border-left: 1px solid #fff;
+    }
+
+    #header_nav li a {
+        color: rgb(255, 166, 0, 0.8);
+        font-weight: bold;
     }
 
     /* メインのCSS */
@@ -237,7 +241,7 @@
 
     .STAGE_show_box {
         margin: 0 20px 15px 0;
-        text-alig   n: center;
+        text-align: center;
         border: 2px solid rgb(255, 166, 0, 0.8);
     }
 
@@ -365,7 +369,7 @@
     }
 }
 
-@media screen and (min-width: 481px) {
+@media screen and (max-width: 959px) {
     /* 余白をなくすための命令 */
     * {
         margin: 0;
