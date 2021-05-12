@@ -1,355 +1,825 @@
 @charset "utf-8";
-/* 余白をなくすための命令 */
-* {
-    margin: 0;
-    padding: 0;
+/* レスポンシブ対応　 */
+@media screen and (min-width: 960px) {
+
+    /* 余白をなくすための命令 */
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* 背景色設定 */
+    body {
+        width: 100vw;
+        background-color: #383838;
+    }
+
+    /* 画像レイアウト */
+    .box img {
+        border-radius: 130px;
+    }
+
+    /* headerのCSS */
+    .menu a {
+        display: none;
+    }
+
+    #header_nav {
+        width: 100vw;
+        list-style: none;
+        text-align: center;
+        background-color: black;
+        opacity: 0.8;
+        position: fixed;
+        top: 0;
+    }
+
+    #header_nav li {
+        margin: 10px 0;
+        width: 140px;
+        display: inline-block;
+        color: rgb(255, 166, 0, 0.8);
+        font-weight: bold;
+        padding: 10px 0;
+        border-right: 1px solid #fff;
+        border-left: 1px solid #fff;
+    }
+
+    /* メインのCSS */
+    
+    /* メイン　WORLD SYSTEM　どちらともに含まれる */
+    .top_image img {
+        margin-top: 65px;
+        width: 100%;
+        height: 600px;
+    }
+
+    .icon_bottom {
+        margin: 0px auto 30px;
+        border-bottom: 5px solid #fff;
+        width: 50px;
+    }
+
+    /* アニメーション */
+    .box {
+        display: flex;
+        justify-content: center;
+        margin: 70px 0;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: 1s;
+    }
+
+    .flex .show {
+        opacity: 1;
+        transform: none;
+    }
+
+    /* WORLDのCSS */
+    #nav_WORLD h2 {
+        margin-top: 50px;
+        padding-top: 50px;
+        margin-bottom: 3px;
+        text-align: center;
+        color: rgb(255, 166, 0, 0.8);
+    }
+
+    .WORLD_sentence_right {
+        margin-right: 50px;
+    }
+
+    .WORLD_image_right {
+        margin-right: 50px;
+    }
+
+    .WORLD_sentence h3 {
+        text-align: center;
+        margin-top: 40px;
+        width: 400px;
+        border-radius: 10px 10px 0 0;
+        padding: 20px 50px;
+        background-color: rgb(0, 0, 0, 0.6);
+        color:  rgb(255, 166, 0, 0.8);
+        font-size: 24px;
+        border-bottom: 5px solid#fff;
+        border-top: 5px solid#fff;
+    }
+
+    .WORLD_sentence p {
+        text-align: center;
+        background-color: rgb(255, 166, 0, 0.5);
+        border-radius: 0 0 10px 10px;
+        padding: 10px 0;
+        line-height: 25px;
+        font-family: "Osaka";
+        color: rgb(0, 0, 0);
+    }
+
+    /* SYSTEMのCSS */
+    #nav_SYSTEM h2 {
+        margin-top: 50px;
+        padding-top: 50px;
+        margin-bottom: 3px;
+        text-align: center;
+        color: rgb(255, 166, 0, 0.8);
+    }
+
+    .SYSTEM_sentence_right {
+        margin-right: 50px;
+    }
+
+    .SYSTEM_image_right {
+        margin-right: 50px;
+    }
+
+    .SYSTEM_sentence h3 {
+        margin-top: 40px;
+        width: 400px;
+        text-align: center;
+        border-radius: 10px 10px 0 0;
+        padding: 20px 50px;
+        background-color: rgb(0, 0, 0, 0.6);
+        color:  rgb(255, 166, 0, 0.8);
+        font-size: 24px;
+        border-bottom: 5px solid#fff;
+        border-top: 5px solid#fff;
+    }
+
+    .SYSTEM_sentence p {
+        text-align: center;
+        background-color: rgb(255, 166, 0, 0.5);
+        border-radius: 0 0 10px 10px;
+        padding: 10px 0;
+        line-height: 25px;
+        font-family: "Osaka";
+        color: rgb(0, 0, 0);
+    }
+
+    /* HEROのCSS */
+    #nav_HERO h2 {
+        margin-top: 50px;
+        padding-top: 50px;
+        margin-bottom: 3px;
+        text-align: center;
+        color: rgb(255, 166, 0, 0.8);
+    }
+
+    /* アタッカー用のスワイパーのCSS */
+    .swiper_box {
+        display: flex;
+        justify-content: center;
+    }
+
+    .swiper_box_attack {
+        margin-right: 50px;
+    }
+
+
+    .swiper-container {
+        width: 400px;
+        height: 500px;
+        margin: 30px auto;
+    }
+
+    .swiper-slide {
+        position: relative;
+    }
+
+    .swiper_sentence h2 {
+        padding-bottom: 5px;
+    }
+
+    .swiper_sentence {
+        position: absolute;
+        background-color: rgb(56, 56, 56, 0.8);
+        width: 400px;
+        height: 180px;
+        bottom: 0px;
+        text-align: center;
+        color:rgb(255, 255, 255);
+    }
+
+    .HERO_TYPE {
+        margin: 30px auto;
+        width: 300px;
+        border-top: solid 3px  rgb(255, 255, 255, 0.8);
+        border-bottom: solid 3px  rgb(255, 255, 255, 0.8);
+    }
+
+    .HERO_TYPE h2 {
+        /* background-color: rgba(0, 0, 0, 0.6); */
+        text-align: center;
+        color: rgb(255, 166, 0, 0.8);
+        padding: 10px;
+    }
+
+    #nav_COLLABO h2 {
+        margin-top: 50px;
+        padding-top: 50px;
+        margin-bottom: 3px;
+        text-align: center;
+        color: rgb(255, 166, 0, 0.8);
+    }
+
+    #nav_STAGE h2 {
+        margin-top: 50px;
+        padding-top: 50px;
+        margin-bottom: 3px;
+        text-align: center;
+        color: rgb(255, 166, 0, 0.8);
+    }
+
+    #STAGE_box .STAGE_show  {
+        display: flex;
+        justify-content: center;
+        margin: 10px 0;
+    }
+
+    .STAGE_show_box {
+        margin: 0 20px 15px 0;
+        text-alig   n: center;
+        border: 2px solid rgb(255, 166, 0, 0.8);
+    }
+
+    .STAGE_show_box h3 {
+        color: rgb(255, 255, 255, 0.8);
+    }
+
+    .STAGE_img_box p {
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        color: rgb(255, 166, 0, 0.8);
+    }
+
+    #nav_PLAYER h2 {
+        margin-top: 50px;
+        padding-top: 50px;
+        margin-bottom: 3px;
+        text-align: center;
+        color: rgb(255, 166, 0, 0.8);
+    }
+
+    .PLAYER_box {
+        margin: 10px 0 30px 0;
+    }
+
+    .PLAYER_youtube {
+        text-align: center;
+        margin: 50px 0;
+    }
+
+    #nav_ILLUST h2 {
+        margin-top: 50px;
+        padding-top: 50px;
+        margin-bottom: 3px;
+        text-align: center;
+        color: rgb(255, 166, 0, 0.8);
+    }
+
+    .ILLUST_box {
+        display: flex;
+        justify-content: center;
+        margin: 100px 0;
+    }
+
+    .ILLUST_box li {
+        list-style: none;
+    }
+
+    .ILLUST_show {
+        margin-right: 50px;
+        border: solid 3px rgb(255, 166, 0, 0.8);
+        border-radius: 10px;
+    }
+
+    .ILLUST_show img {
+        border-radius: 5px;
+    }
+
+    .ILLUST_ul p {
+        margin: 50px 0;
+        text-align: center;
+        color: rgb(255, 166, 0, 0.8);
+        line-height: 30px;
+        font-weight: bold;
+    }
+
+    #nav_CAST h2 {
+        margin-top: 50px;
+        padding-top: 50px;
+        margin-bottom: 3px;
+        text-align: center;
+        color: rgb(255, 166, 0, 0.8);
+    }
+
+    .CAST_ul h2 {
+        text-align: center;
+        margin: 10px 0 30px 0;
+        color: rgb(255, 166, 0, 0.8);
+    }
+
+    .CAST_boxes {
+        display: flex;
+        margin-left: 38%;
+    }
+
+    .CAST_box_left {
+        text-align: center;
+    }
+
+    .CAST_box_right {
+        text-align: center;
+    }
+
+    .CAST_box_left li {
+        width: 150px;
+        margin: 10px 0;
+        list-style: none;
+        margin-right: 50px;
+        font-size: 18px;
+        font-family: "Osaka";
+        color: rgb(255, 255, 255, 0.8);
+    }
+
+    .CAST_box_right li {
+        width: 150px;
+        margin: 10px 0;
+        list-style: none;
+        margin-right: 50px;
+        font-size: 18px;
+        font-family: "Osaka";
+        color: rgb(255, 255, 255, 0.8);
+    }
+
+    /* footerのCSS */
+    footer {
+        background-color: rgb(0, 0, 0, 0.6);
+    }
+
+    footer p {
+        text-align: center;
+        font-weight: bold;
+        color: #fff;
+        padding: 20px 0;
+    }
 }
 
-/* 背景色設定 */
-body {
-    background-color: #383838;
+@media screen and (min-width: 481px) {
+    /* 余白をなくすための命令 */
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* 背景色設定 */
+    body {
+        background-color: #383838;
+    }
+
+    /* 画像レイアウト */
+    .box img {
+        border-radius: 130px;
+    }
+
+    /* ヘッダーのCSS */
+    a {
+        text-decoration: none;
+    }
+
+    #header_nav {
+        width: 100vw;
+        position: relative;
+        text-align: center;
+        background-color: rgb(0, 0, 0,0.9);
+        z-index: 9998;
+    }
+
+    .header_nav_list a {
+        color: rgb(255, 166, 0, 0.8);
+    }
+
+    .header_nav_list{
+        width: 150px;
+        border-bottom: solid 1px #fff;
+        padding: 10px 0;
+        margin: 10px auto;
+    }
+
+    .header_nav_list:nth-of-type(1){
+        width: 150px;
+        border-bottom: solid 1px #fff;
+        padding: 10px 0;
+        margin: 0 auto;
+    }
+
+    .header_nav_list:nth-of-type(8){
+        padding: 10px 0;
+        border-bottom: none;
+        margin: 0 auto;
+    }
+
+    /* ドロワーメニューバー */
+
+    .menuButton {
+        display: block;
+        width: 50px;
+        height: 50px;
+        background-color: rgb(255, 166, 0, 0.8);
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        right: 0;
+    }
+
+    .menuButton div {
+        height: 1px;
+        width: 60%;
+        background-color: #333333;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: 0.3s;
+    }
+
+    .menuButton div:nth-of-type(1) {
+        transform: translate(-50%, -10px);
+    }
+
+    .menuButton div:nth-of-type(3) {
+        transform: translate(-50%, 10px);
+    }
+
+    .menuButton.active div:nth-of-type(1) {
+        transform: rotate(45deg) translate(-50%, 0px);
+        transform-origin: 0% 50%;
+    }
+
+    .menuButton.active div:nth-of-type(2) {
+        opacity: 0;
+    }
+
+    .menuButton.active div:nth-of-type(3) {
+        transform: rotate(-45deg) translate(-50%, 0px);
+        transform-origin: 0% 50%;
+    }
+
+    nav {
+        opacity: 0; /* 非表示にする */
+        visibility: hidden; /* クリックもできないようにする命令 */
+        transition: .3s;
+    }
+
+    nav.active {
+        opacity: 1; 
+        visibility: visible; /* クリックできるようにする命令 */
+    }
+
+
+    /* メインのCSS */
+    
+    /* アニメーションCSS */
+    .box {
+        text-align: center;
+        margin: 70px 0;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: 1s;
+    }
+    .flex .show {
+        opacity: 1;
+        transform: none;
+    }
+
+    /* メイン　WORLD SYSTEM　どちらともに含まれる */
+
+    .top_image img {
+        width: 100%;
+        position: absolute;
+        top: 0px;
+    }
+
+    /* WORLDのCSS */
+    #nav_WORLD h2 {
+        margin-top: -50px;
+        text-align: center;
+        color: rgb(255, 166, 0, 0.8);
+    }
+
+    .icon_bottom {
+        margin: 0px auto 30px;
+        border-bottom: 5px solid #fff;
+        width: 50px;
+    }
+
+    .WORLD_sentence_right {
+        margin: 20px 0;
+    }
+
+    .WORLD_sentence h3 {
+        text-align: center;
+        margin: 40px auto 0;
+        width: 300px;
+        border-radius: 10px 10px 0 0;
+        padding: 20px 50px;
+        background-color: rgb(0, 0, 0, 0.6);
+        color:  rgb(255, 166, 0, 0.8);
+        font-size: 18px;
+        border-bottom: 5px solid#fff;
+        border-top: 5px solid#fff;
+    }
+
+    .WORLD_sentence p {
+        width: 400px;
+        text-align: center;
+        background-color: rgb(255, 166, 0, 0.5);
+        border-radius: 0 0 10px 10px;
+        padding: 10px 0;
+        line-height: 25px;
+        font-family: "Osaka";
+        color: rgb(0, 0, 0);
+        margin: 0 auto;
+    }
+
+    /* WORLDのdivの順番を変える */
+    .box:nth-of-type(1) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .WORLD_sentence_right:nth-of-type(1) {
+        order: 2
+    }
+
+    .WORLD_image:nth-of-type(1) {
+        order: 1;
+    }
+
+    .box:nth-of-type(3) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .WORLD_sentence_right:nth-of-type(3) {
+        order: 2
+    }
+
+    .WORLD_image:nth-of-type(3) {
+        order: 1;
+    }
+
+    /* SYSTEMのCSS */
+
+    #nav_SYSTEM h2 {
+        text-align: center;
+        color: rgb(255, 166, 0, 0.8);
+    }
+
+    .SYSTEM_sentence h3 {
+        margin: 40px auto 0;
+        width: 300px;
+        border-radius: 10px 10px 0 0;
+        padding: 20px 50px;
+        background-color: rgb(0, 0, 0, 0.6);
+        color:  rgb(255, 166, 0, 0.8);
+        font-size: 24px;
+        border-bottom: 5px solid#fff;
+        border-top: 5px solid#fff;
+    }
+
+    .SYSTEM_sentence p {
+        width: 400px;
+        margin: 0 auto;
+        background-color: rgb(255, 166, 0, 0.5);
+        border-radius: 0 0 10px 10px;
+        padding: 10px 0;
+        line-height: 25px;
+        font-family: "Osaka";
+        color: rgb(0, 0, 0);
+    }
+
+
+    /* SYSTEMのdivの順番を変える */
+    .box:nth-of-type(2) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .SYSTEM_sentence_right:nth-of-type(1) {
+        order: 2
+    }
+
+    .SYSTEM_image:nth-of-type(2) {
+        order: 1;
+    }
+
+    /* HEROのCSS */
+    #nav_HERO h2 {
+        margin-top: 50px;
+        padding-top: 50px;
+        margin-bottom: 3px;
+        text-align: center;
+        color: rgb(255, 166, 0, 0.8);
+    }
+
+    /* アタッカー用のスワイパーのCSS */
+    .swiper_box {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .swiper_box_attack {
+        margin: 0 auto;
+    }
+
+    .swiper-container {
+        width: 400px;
+        height: 500px;
+        margin: 30px auto;
+    }
+
+    .swiper-slide {
+        position: relative;
+    }
+
+    .swiper_sentence h2 {
+        padding-bottom: 5px;
+    }
+
+    .swiper_sentence {
+        position: absolute;
+        background-color: rgb(56, 56, 56, 0.8);
+        width: 400px;
+        height: 180px;
+        bottom: 0px;
+        text-align: center;
+        color:rgb(255, 255, 255);
+    }
+
+    .HERO_TYPE {
+        margin: 30px auto;
+        width: 300px;
+        border-top: solid 3px  rgb(255, 255, 255, 0.8);
+        border-bottom: solid 3px  rgb(255, 255, 255, 0.8);
+    }
+
+    .HERO_TYPE h2 {
+        /* background-color: rgba(0, 0, 0, 0.6); */
+        text-align: center;
+        color: rgb(255, 166, 0, 0.8);
+        padding: 10px;
+    }
+
+    #nav_COLLABO h2 {
+        margin-top: 50px;
+        padding-top: 50px;
+        margin-bottom: 3px;
+        text-align: center;
+        color: rgb(255, 166, 0, 0.8);
+    }   
+
+    #nav_STAGE h2 {
+        margin-top: 50px;
+        padding-top: 50px;
+        margin-bottom: 3px;
+        text-align: center;
+        color: rgb(255, 166, 0, 0.8);
+    }
+
+    #STAGE_box .STAGE_show  {
+        display: flex;
+        flex-direction: column;
+        margin: 10px auto;
+    }
+
+    .STAGE_show_box {
+        margin: 0 auto 15px;
+        width: 400px;
+        border: 2px solid rgb(255, 166, 0, 0.8);
+    }
+
+    .STAGE_show_box h3 {
+        text-align: center;
+        color: rgb(255, 255, 255, 0.8);
+    }
+
+    .STAGE_img_box p {
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        color: rgb(255, 166, 0, 0.8);
+    }
+
+    #nav_PLAYER h2 {
+        margin-top: 50px;
+        padding-top: 50px;
+        margin-bottom: 3px;
+        text-align: center;
+        color: rgb(255, 166, 0, 0.8);
+    }
+
+    .PLAYER_box {
+        margin: 10px 0 30px 0;
+    }
+
+    .PLAYER_youtube {
+        text-align: center;
+        margin: 50px 0;
+    }
+
+    #nav_ILLUST h2 {
+        margin-top: 50px;
+        padding-top: 50px;
+        margin-bottom: 3px;
+        text-align: center;
+        color: rgb(255, 166, 0, 0.8);
+    }
+
+    .ILLUST_box {
+        display: flex;
+        flex-direction: column;
+        margin: 10px auto;
+    }
+
+    .ILLUST_box li {
+        list-style: none;
+    }
+
+    .ILLUST_show {
+        margin: 10px auto;
+        border: solid 3px rgb(255, 166, 0, 0.8);
+        border-radius: 10px;
+    }
+
+    .ILLUST_show img {
+        border-radius: 5px;
+    }
+
+    .ILLUST_ul p {
+        margin: 50px 0;
+        text-align: center;
+        color: rgb(255, 166, 0, 0.8);
+        line-height: 30px;
+        font-weight: bold;
+    }
+
+    #nav_CAST h2 {
+        margin-top: 50px;
+        padding-top: 50px;
+        margin-bottom: 3px;
+        text-align: center;
+        color: rgb(255, 166, 0, 0.8);
+    }
+
+    .CAST_ul h2 {
+        text-align: center;
+        margin: 10px 0 30px 0;
+        color: rgb(255, 166, 0, 0.8);
+    }
+
+    .CAST_boxes {
+        display: flex;
+        margin-left: 20%;
+    }
+
+    .CAST_box_left {
+        text-align: center;
+    }
+
+    .CAST_box_right {
+        text-align: center;
+    }
+
+    .CAST_box_left li {
+        width: 150px;
+        margin: 10px 0;
+        list-style: none;
+        margin-right: 50px;
+        font-size: 18px;
+        font-family: "Osaka";
+        color: rgb(255, 255, 255, 0.8);
+    }
+
+    .CAST_box_right li {
+        width: 150px;
+        margin: 10px 0;
+        list-style: none;
+        margin-right: 50px;
+        font-size: 18px;
+        font-family: "Osaka";
+        color: rgb(255, 255, 255, 0.8);
+    }
+
+    /* footerのCSS */
+    footer {
+        background-color: rgb(0, 0, 0, 0.6);
+    }
+
+    footer p {
+        text-align: center;
+        font-weight: bold;
+        color: #fff;
+        padding: 20px 0;
+    }
 }
-
-/* 画像レイアウト */
-.box img {
-    border-radius: 130px;
-}
-
-/* headerのCSS */
-#header_nav {
-    list-style: none;
-    text-align: center;
-    background-color: black;
-    opacity: 0.5;
-}
-
-#header_nav li {
-    margin: 10px 0;
-    width: 140px;
-    display: inline-block;
-    color: rgb(255, 166, 0, 0.8);
-    font-weight: bold;
-    padding: 10px 0;
-    border-right: 1px solid #fff;
-    border-left: 1px solid #fff;
-}
-
-/* メインのCSS */
- 
-/* メイン　WORLD SYSTEM　どちらともに含まれる */
-.icon_bottom {
-    margin: 0px auto 30px;
-    border-bottom: 5px solid #fff;
-    width: 50px;
-}
-
-.flex {
-    margin-left: 23%;
-}
-
-/* アニメーション */
-.box {
-    display: flex;
-    margin: 70px 0;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: 1s;
-}
-
-.flex .show {
-    opacity: 1;
-    transform: none;
-}
-
-/* WORLDのCSS */
-#nav_WORLD h2 {
-    margin-top: 50px;
-    padding-top: 50px;
-    margin-bottom: 3px;
-    text-align: center;
-    color: rgb(255, 166, 0, 0.8);
-}
-
-.WORLD_sentence_right {
-    margin-right: 50px;
-}
-
-.WORLD_image_right {
-    margin-right: 50px;
-}
-
-.WORLD_sentence h3 {
-    margin-top: 40px;
-    width: 400px;
-    text-align: center;
-    border-radius: 10px 10px 0 0;
-    padding: 20px 50px;
-    background-color: rgb(0, 0, 0, 0.6);
-    color:  rgb(255, 166, 0, 0.8);
-    font-size: 24px;
-    border-bottom: 5px solid#fff;
-    border-top: 5px solid#fff;
-}
-
-.WORLD_sentence p {
-    text-align: center;
-    background-color: rgb(255, 166, 0, 0.5);
-    border-radius: 0 0 10px 10px;
-    padding: 10px 0;
-    line-height: 25px;
-    font-family: "Osaka";
-    color: rgb(0, 0, 0);
-}
-
-/* SYSTEMのCSS */
-#nav_SYSTEM h2 {
-    margin-top: 50px;
-    padding-top: 50px;
-    margin-bottom: 3px;
-    text-align: center;
-    color: rgb(255, 166, 0, 0.8);
-}
-
-.SYSTEM_sentence_right {
-    margin-right: 50px;
-}
-
-.SYSTEM_image_right {
-    margin-right: 50px;
-}
-
-.SYSTEM_sentence h3 {
-    margin-top: 40px;
-    width: 400px;
-    text-align: center;
-    border-radius: 10px 10px 0 0;
-    padding: 20px 50px;
-    background-color: rgb(0, 0, 0, 0.6);
-    color:  rgb(255, 166, 0, 0.8);
-    font-size: 24px;
-    border-bottom: 5px solid#fff;
-    border-top: 5px solid#fff;
-}
-
-.SYSTEM_sentence p {
-    text-align: center;
-    background-color: rgb(255, 166, 0, 0.5);
-    border-radius: 0 0 10px 10px;
-    padding: 10px 0;
-    line-height: 25px;
-    font-family: "Osaka";
-    color: rgb(0, 0, 0);
-}
-
-/* HEROのCSS */
-#nav_HERO h2 {
-    margin-top: 50px;
-    padding-top: 50px;
-    margin-bottom: 3px;
-    text-align: center;
-    color: rgb(255, 166, 0, 0.8);
-}
-
-/* アタッカー用のスワイパーのCSS */
-.swiper_box {
-    display: flex;
-    margin-left: 20.6%;
-}
-
-.swiper_box_attack {
-    margin-right: 50px;
-}
-
-
-.swiper-container {
-    width: 400px;
-    height: 500px;
-    margin: 30px auto;
-}
-
-.swiper-slide {
-    position: relative;
-}
-
-.swiper_sentence h2 {
-    padding-bottom: 5px;
-}
-
-.swiper_sentence {
-    position: absolute;
-    background-color: rgb(56, 56, 56, 0.8);
-    width: 400px;
-    height: 180px;
-    bottom: 0px;
-    text-align: center;
-    color:rgb(255, 255, 255);
-}
-
-.HERO_TYPE {
-    margin: 30px auto;
-    width: 300px;
-    border-top: solid 3px  rgb(255, 255, 255, 0.8);
-    border-bottom: solid 3px  rgb(255, 255, 255, 0.8);
-}
-
-.HERO_TYPE h2 {
-    /* background-color: rgba(0, 0, 0, 0.6); */
-    text-align: center;
-    color: rgb(255, 166, 0, 0.8);
-    padding: 10px;
-}
-
-#nav_COLLABO h2 {
-    margin-top: 50px;
-    padding-top: 50px;
-    margin-bottom: 3px;
-    text-align: center;
-    color: rgb(255, 166, 0, 0.8);
-}
-
-#nav_STAGE h2 {
-    margin-top: 50px;
-    padding-top: 50px;
-    margin-bottom: 3px;
-    text-align: center;
-    color: rgb(255, 166, 0, 0.8);
-}
-
-#STAGE_box .STAGE_show  {
-    display: flex;
-    margin: 10px 22%;
-}
-
-.STAGE_show_box {
-    margin: 0 20px 15px 0;
-    text-align: center;
-    border: 2px solid rgb(255, 166, 0, 0.8);
-}
-
-.STAGE_show_box h3 {
-    color: rgb(255, 255, 255, 0.8);
-}
-
-.STAGE_img_box p {
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    color: rgb(255, 166, 0, 0.8);
-}
-
-#nav_PLAYER h2 {
-    margin-top: 50px;
-    padding-top: 50px;
-    margin-bottom: 3px;
-    text-align: center;
-    color: rgb(255, 166, 0, 0.8);
-}
-
-.PLAYER_box {
-    margin: 10px 0 30px 0;
-}
-
-.PLAYER_youtube {
-    text-align: center;
-    margin:50px 0;
-}
-
-#nav_ILLUST h2 {
-    margin-top: 50px;
-    padding-top: 50px;
-    margin-bottom: 3px;
-    text-align: center;
-    color: rgb(255, 166, 0, 0.8);
-}
-
-.ILLUST_ul {
-    margin-left: 12.1%;
-}
-
-.ILLUST_box {
-    display: flex;
-    margin: 100px 0;
-}
-.ILLUST_box li {
-    list-style: none;
-}
-
-.ILLUST_show {
-    margin-right: 50px;
-    border: solid 3px rgb(255, 166, 0, 0.8);
-    border-radius: 10px;
-}
-
-.ILLUST_show img {
-    border-radius: 5px;
-}
-
-.ILLUST_ul p {
-    margin: 50px 0;
-    text-align: center;
-    margin-right: 17%;
-    color: rgb(255, 166, 0, 0.8);
-    line-height: 30px;
-    font-weight: bold;
-}
-
-#nav_CAST h2 {
-    margin-top: 50px;
-    padding-top: 50px;
-    margin-bottom: 3px;
-    text-align: center;
-    color: rgb(255, 166, 0, 0.8);
-}
-
-.CAST_ul h2 {
-    text-align: center;
-    margin: 10px 0 30px 0;
-    color: rgb(255, 166, 0, 0.8);
-}
-
-.CAST_boxes {
-    display: flex;
-    margin-left: 38%;
-}
-
-.CAST_box_left {
-    text-align: center;
-}
-
-.CAST_box_right {
-    text-align: center;
-}
-
-.CAST_box_left li {
-    width: 150px;
-    margin: 10px 0;
-    list-style: none;
-    margin-right: 50px;
-    font-size: 18px;
-    font-family: "Osaka";
-    color: rgb(255, 255, 255, 0.8);
-}
-
-.CAST_box_right li {
-    width: 150px;
-    margin: 10px 0;
-    list-style: none;
-    margin-right: 50px;
-    font-size: 18px;
-    font-family: "Osaka";
-    color: rgb(255, 255, 255, 0.8);
-}
-
-/* footerのCSS */
-footer {
-    background-color: rgb(0, 0, 0, 0.6);
-}
-
-footer p {
-    text-align: center;
-    font-weight: bold;
-    color: #fff;
-    padding: 20px 0;
-}
-
-
