@@ -33,19 +33,23 @@
         opacity: 0.8;
         position: fixed;
         top: 0;
+        z-index: 10000;
     }
 
     #header_nav li {
         margin: 10px 0;
         width: 140px;
         display: inline-block;
-        color: rgb(255, 166, 0, 0.8);
-        font-weight: bold;
         padding: 10px 0;
         border-right: 1px solid #fff;
         border-left: 1px solid #fff;
     }
 
+    #header_nav li a {
+        color: rgb(255, 166, 0, 0.8);
+        font-weight: bold;
+        text-decoration: none;
+    }
     /* メインのCSS */
     
     /* メイン　WORLD SYSTEM　どちらともに含まれる */
@@ -78,8 +82,8 @@
 
     /* WORLDのCSS */
     #nav_WORLD h2 {
-        margin-top: 50px;
-        padding-top: 50px;
+        margin-top: 100px;
+        padding-top: 100px;
         margin-bottom: 3px;
         text-align: center;
         color: rgb(255, 166, 0, 0.8);
@@ -119,7 +123,7 @@
     /* SYSTEMのCSS */
     #nav_SYSTEM h2 {
         margin-top: 50px;
-        padding-top: 50px;
+        padding-top: 100px;
         margin-bottom: 3px;
         text-align: center;
         color: rgb(255, 166, 0, 0.8);
@@ -159,7 +163,7 @@
     /* HEROのCSS */
     #nav_HERO h2 {
         margin-top: 50px;
-        padding-top: 50px;
+        padding-top: 100px;
         margin-bottom: 3px;
         text-align: center;
         color: rgb(255, 166, 0, 0.8);
@@ -216,7 +220,7 @@
 
     #nav_COLLABO h2 {
         margin-top: 50px;
-        padding-top: 50px;
+        padding-top: 100px;
         margin-bottom: 3px;
         text-align: center;
         color: rgb(255, 166, 0, 0.8);
@@ -224,7 +228,7 @@
 
     #nav_STAGE h2 {
         margin-top: 50px;
-        padding-top: 50px;
+        padding-top: 100px;
         margin-bottom: 3px;
         text-align: center;
         color: rgb(255, 166, 0, 0.8);
@@ -255,7 +259,7 @@
 
     #nav_PLAYER h2 {
         margin-top: 50px;
-        padding-top: 50px;
+        padding-top: 100px;
         margin-bottom: 3px;
         text-align: center;
         color: rgb(255, 166, 0, 0.8);
@@ -272,7 +276,7 @@
 
     #nav_ILLUST h2 {
         margin-top: 50px;
-        padding-top: 50px;
+        padding-top: 100px;
         margin-bottom: 3px;
         text-align: center;
         color: rgb(255, 166, 0, 0.8);
@@ -308,7 +312,7 @@
 
     #nav_CAST h2 {
         margin-top: 50px;
-        padding-top: 50px;
+        padding-top: 100px;
         margin-bottom: 3px;
         text-align: center;
         color: rgb(255, 166, 0, 0.8);
