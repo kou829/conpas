@@ -1,17 +1,17 @@
 // トップ画像のスライド
-const img_src = ["image/コンパス 画像８.jpg","image/コンパス 画像１.JPG","image/コンパス 画像９.JPG"];
-      let num = -1;
+// const img_src = ["image/コンパス 画像８.jpg","image/コンパス 画像１.JPG","image/コンパス 画像９.JPG"];
+//       let num = -1;
 
-      function slide_time() {
-        if (num === 2) {
-          num = 0;
-        } else {
-          num++;
-        }
-        document.getElementById("slide_img").src = img_src[num];
-      }
+//       function slide_time() {
+//         if (num === 2) {
+//           num = 0;
+//         } else {
+//           num++;
+//         }
+//         document.getElementById("slide_img").src = img_src[num];
+//       }
 
-      setInterval(slide_time, 3000);
+//       setInterval(slide_time, 3000);
 
 
 // アニメーション　フワッと表示
